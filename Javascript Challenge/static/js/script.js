@@ -4,11 +4,12 @@ function ageInDays(){
     var now = new Date();
     var diff = now-bday;
     var ans=parseInt(diff/86400000);
-    var h1=document.createElement("h1");
+    var h2=document.createElement("h2");
     var textAnswer= document.createTextNode("You are "+ ans +" days old!");
-    h1.setAttribute('id','ageInDays');
-    h1.appendChild(textAnswer);
-    document.getElementById('flex-box-result').appendChild(h1);
+    h2.setAttribute('id','ageInDays');
+    h2.setAttribute('style','border: 1px solid black; padding: 5px')
+    h2.appendChild(textAnswer);
+    document.getElementById('flex-box-result').appendChild(h2);
 }
 
 function reset(){
