@@ -71,7 +71,7 @@ function rpsReset(){
 
     node.innerHTML=" <img id ='rock' src='https://purepng.com/public/uploads/large/dwayne-johnson-the-rock-hbz.png' height=250 width=250 onclick='rpsGame(this)'> \
     <img id ='paper' src='https://img.favpng.com/12/5/10/towel-kitchen-paper-tissue-paper-toilet-paper-png-favpng-Uz6vWCeWVm4YGpf4VdjX7AADz.jpg' height=250 width=250 onclick='rpsGame(this)'> \
-    <img id ='scissors' src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/still10-preview-1522353855.jpg?crop=1.00xw:0.752xh;0,0.0625xh&resize=640:*' height=250 width=250 onclick='rpsGame(this)' >";
+    <img id ='scissors' src='https://m.media-amazon.com/images/M/MV5BNDc4YjQ1ODYtMjFkMy00OTUyLWIzZmQtZDRiYTM2N2RlNGI2XkEyXkFqcGdeQXVyMjAwMzU2MDY@._V1_.jpg' height=250 width=250 onclick='rpsGame(this)' >";
     console.log("resetting");
 }
 function rpsGame(yourChoice){
