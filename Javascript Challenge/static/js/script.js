@@ -86,3 +86,28 @@ function rpsGame(yourChoice){
 
 }
 
+
+// Challenge 4: change button colors ( what am I doing with my life)
+
+var all_buttons= document.getElementsByTagName("button");
+var copyAllButtons=[];
+for(let i=0;i<all_buttons.length;++i) copyAllButtons.push(all_buttons[i].classList[1]);
+
+
+function buttonColorChange(buttonThingy){
+    var colorDatabase={
+        'red':'btn-danger',
+        'green':'btn-success',
+        'blue':'btn-primary',
+    }
+    for(let i=0; i<all_buttons.length;++i){
+        all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+        if(buttonThingy.value==='random') all_buttons[i].classList.add("btn-"+['primary','secondary','success','danger','warning','info','light','dark'][(Math.floor(Math.random()*100))%8]);
+        else if(buttonThingy.value==='reset') all_buttons[i].classList.add(copyAllButtons[i]);
+        else all_buttons[i].classList.add(colorDatabase[buttonThingy.value]);
+    }
+}
+
+
+
+
