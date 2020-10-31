@@ -135,6 +135,8 @@ const YOU = blackjackGame["you"];
 const DEALER = blackjackGame["dealer"];
 const cards=blackjackGame["cards"];
 const hitSound= new Audio('static/sounds/swish.m4a');
+const winSound= new Audio('static/sounds/cash.mp3');
+const loseSound = new Audio('static/sounds/aww.mp3');
 
 function showCard(activePlayer){
     let cardImage=document.createElement('img');
@@ -169,6 +171,7 @@ function showScore(activePlayer){
             document.querySelector("#losses").textContent=blackjackGame["losses"];
             document.querySelector("#blackjack-result").textContent= "You Lost!";
             document.querySelector("#blackjack-result").style.color = "red";
+            loseSound.play();
             alert("continue");
             blackjackDeal();
         }
@@ -204,12 +207,14 @@ async function blackjackStand(){
         document.querySelector("#wins").textContent=blackjackGame["wins"];
         document.querySelector("#blackjack-result").textContent= "You Won!";
         document.querySelector("#blackjack-result").style.color = "green";
+        winSound.play();
     }
     else{
         blackjackGame["losses"]+=1
         document.querySelector("#losses").textContent=blackjackGame["losses"];
         document.querySelector("#blackjack-result").textContent= "You Lost!";
         document.querySelector("#blackjack-result").style.color = "red";
+        loseSound.play();
     }
     alert("continue");
     blackjackDeal();
